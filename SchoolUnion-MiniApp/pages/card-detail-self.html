@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>名片详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div class="status-bar-time">9:41</div>
+        <div class="status-bar-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-left">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+        <div class="nav-title">我的名片</div>
+        <div class="nav-right">
+            <a href="edit-profile.html" class="edit-btn">
+                <i class="fas fa-edit"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content pb-20">
+        <div class="card-detail">
+            <!-- 用户基本信息 -->
+            <div class="card-header">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="用户头像" class="card-avatar">
+                <div class="card-basic-info">
+                    <div class="flex items-center">
+                        <h1 class="card-name">于瑀</h1>
+                        <span class="gender-tag male">♂</span>
+                        <span class="membership-tag">会员</span>
+                    </div>
+                    <div class="card-meta">广州·大学城</div>
+                    <div class="card-position">学生会主席</div>
+                </div>
+                <button class="share-btn">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+            </div>
+
+            <!-- 个人介绍 -->
+            <div class="card-section">
+                <h2 class="card-section-title">个人介绍</h2>
+                <p class="card-section-content">热爱社团活动，擅长组织管理与跨部门协作。致力于促进校园文化建设和学生权益保障，期望通过学生会工作帮助更多同学成长。</p>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="card-section">
+                <h2 class="card-section-title">联系方式</h2>
+                <div class="card-section-content">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>13660016250</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>1877668194@qq.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <span>yuyu2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技能特长 -->
+            <div class="card-section">
+                <h2 class="card-section-title">技能特长</h2>
+                <div class="card-section-content">
+                    <div class="skill-tags">
+                        <span class="skill-tag">活动策划</span>
+                        <span class="skill-tag">团队管理</span>
+                        <span class="skill-tag">公共演讲</span>
+                        <span class="skill-tag">沟通协调</span>
+                        <span class="skill-tag">文案写作</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 教育背景 -->
+            <div class="card-section">
+                <h2 class="card-section-title">教育背景</h2>
+                <div class="card-section-content">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">广东外语外贸大学</div>
+                            <div class="experience-time">2022.09 - 至今</div>
+                        </div>
+                        <div class="experience-subtitle">国际商务 | 本科</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 工作经历 -->
+            <div class="card-section">
+                <h2 class="card-section-title">工作经历</h2>
+                <div class="card-section-content">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">校学生会</div>
+                            <div class="experience-time">2023.09 - 至今</div>
+                        </div>
+                        <div class="experience-subtitle">主席</div>
+                        <div class="experience-content">
+                            负责学生会日常工作的规划与管理，组织各类校园活动，促进校园文化建设，维护学生权益。
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">公共外交协会</div>
+                            <div class="experience-time">2022.10 - 2023.06</div>
+                        </div>
+                        <div class="experience-subtitle">副会长</div>
+                        <div class="experience-content">
+                            组织国际文化交流活动，负责社团宣传与外联工作，提升校园国际化氛围。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 社交媒体 -->
+            <div class="card-section">
+                <h2 class="card-section-title">社交媒体</h2>
+                <div class="card-section-content">
+                    <div class="social-item">
+                        <i class="fab fa-weibo"></i>
+                        <span>@于瑀_GDUFS</span>
+                    </div>
+                    <div class="social-item">
+                        <i class="fab fa-tiktok"></i>
+                        <span>@yuyu_campus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享模态框 -->
+    <div id="shareModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">分享名片</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="grid grid-cols-4 gap-4 mb-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-1">
+                            <i class="fab fa-weixin text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">微信好友</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">朋友圈</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-qrcode text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">二维码</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-copy text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">复制链接</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部标签栏 -->
+    <div class="tab-bar">
+        <a href="home.html" class="tab-item" data-page="home">
+            <i class="tab-icon fas fa-home"></i>
+            <span>主页</span>
+        </a>
+        <a href="integration.html" class="tab-item" data-page="integration">
+            <i class="tab-icon fas fa-project-diagram"></i>
+            <span>资源整合</span>
+        </a>
+        <a href="shop.html" class="tab-item" data-page="shop">
+            <i class="tab-icon fas fa-shopping-bag"></i>
+            <span>商城</span>
+        </a>
+        <a href="profile.html" class="tab-item" data-page="profile">
+            <i class="tab-icon fas fa-user"></i>
+            <span>个人</span>
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

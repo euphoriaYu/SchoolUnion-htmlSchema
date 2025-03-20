@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>发布帖子</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div class="status-bar-time">9:41</div>
+        <div class="status-bar-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-left">
+            <a href="discover.html" class="text-gray-500">取消</a>
+        </div>
+        <div class="nav-title">发布聚力</div>
+        <div class="nav-right">
+            <button class="text-black font-medium">发布</button>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content">
+        <form data-validate>
+            <!-- 用户信息 -->
+            <div class="flex items-center mb-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="用户头像" class="w-10 h-10 rounded-full mr-3">
+                <div>
+                    <h3 class="font-medium">Yu Eugenio</h3>
+                    <div class="flex items-center">
+                        <span class="text-xs text-gray-500 mr-2">可见范围</span>
+                        <select class="text-xs bg-transparent border-none text-gray-700 focus:outline-none">
+                            <option>公开</option>
+                            <option>仅关注者可见</option>
+                            <option>仅自己可见</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 帖子内容 -->
+            <div class="form-group">
+                <textarea class="form-control border-none resize-none" placeholder="分享你的想法，寻找志同道合的人..." rows="6" required></textarea>
+            </div>
+
+            <!-- 图片上传 -->
+            <div class="upload-area mb-4">
+                <div class="upload-item">
+                    <input type="file" id="upload1" class="upload-input hidden" accept="image/*">
+                    <label for="upload1" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="upload2" class="upload-input hidden" accept="image/*">
+                    <label for="upload2" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="upload3" class="upload-input hidden" accept="image/*">
+                    <label for="upload3" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="upload4" class="upload-input hidden" accept="image/*">
+                    <label for="upload4" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="upload5" class="upload-input hidden" accept="image/*">
+                    <label for="upload5" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="upload6" class="upload-input hidden" accept="image/*">
+                    <label for="upload6" class="w-full h-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-plus"></i>
+                    </label>
+                    <div class="upload-preview-container"></div>
+                </div>
+            </div>
+
+            <!-- 标签选择 -->
+            <div class="form-group">
+                <label class="form-label">添加标签</label>
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
+                        <span>#寻求合作</span>
+                        <i class="fas fa-times ml-2 text-xs"></i>
+                    </span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
+                        <span>#产品设计</span>
+                        <i class="fas fa-times ml-2 text-xs"></i>
+                    </span>
+                    <button class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
+                        <i class="fas fa-plus mr-1 text-xs"></i>
+                        <span>添加标签</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 地点和时间 -->
+            <div class="form-group">
+                <label class="form-label">地点和时间</label>
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-map-marker-alt text-gray-500 mr-2"></i>
+                    <input type="text" class="form-control border-none bg-gray-100" placeholder="添加地点" value="深圳·南山区">
+                </div>
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-calendar-alt text-gray-500 mr-2"></i>
+                    <input type="text" class="form-control border-none bg-gray-100" placeholder="添加日期" value="7.24">
+                </div>
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-clock text-gray-500 mr-2"></i>
+                    <input type="text" class="form-control border-none bg-gray-100" placeholder="添加时间" value="15:00-17:00">
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-coffee text-gray-500 mr-2"></i>
+                    <input type="text" class="form-control border-none bg-gray-100" placeholder="活动类型" value="喝杯咖啡">
+                </div>
+            </div>
+
+            <!-- 链接设置 -->
+            <div class="form-group">
+                <label class="form-label">链接设置</label>
+                <div class="flex items-center justify-between p-3 bg-gray-100 rounded-lg">
+                    <div>
+                        <h4 class="font-medium text-sm">链接人数</h4>
+                        <p class="text-xs text-gray-500">设置你想链接的人数</p>
+                    </div>
+                    <select class="bg-white border border-gray-300 rounded px-2 py-1 text-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

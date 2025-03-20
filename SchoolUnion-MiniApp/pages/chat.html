@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>聊天</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 180px);
+        }
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        .message {
+            max-width: 75%;
+            margin-bottom: 15px;
+            border-radius: 18px;
+            padding: 10px 15px;
+            position: relative;
+            word-wrap: break-word;
+        }
+        .message-time {
+            font-size: 0.7rem;
+            color: #999;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .message-incoming {
+            align-self: flex-start;
+            background-color: #f1f1f1;
+            border-bottom-left-radius: 5px;
+            margin-right: auto;
+        }
+        .message-outgoing {
+            align-self: flex-end;
+            background-color: #dcf8c6;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        .chat-input-container {
+            display: flex;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+            position: fixed;
+            bottom: 48px;
+            left: 0;
+            right: 0;
+        }
+        .chat-input {
+            flex: 1;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+        .chat-send-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4caf50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div class="status-bar-time">9:41</div>
+        <div class="status-bar-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-left">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+        <div class="nav-title">
+            <div class="flex items-center">
+                <span>Vincent</span>
+                <span class="text-xs text-green-500 ml-2">在线</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="more-btn">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 聊天内容区域 -->
+    <div class="chat-container">
+        <div class="chat-messages">
+            <!-- 系统消息 -->
+            <div class="flex justify-center my-4">
+                <div class="bg-gray-200 text-gray-600 text-xs px-3 py-1 rounded-full">
+                    今天 09:30
+                </div>
+            </div>
+            
+            <!-- 接收的消息 -->
+            <div class="flex mb-4">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                    <div class="message message-incoming">
+                        你好！关于户外储能电源项目拓展俄罗斯市场的事情，我们可以详细聊聊！
+                        <div class="message-time">09:31</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 发送的消息 -->
+            <div class="flex justify-end mb-4">
+                <div>
+                    <div class="message message-outgoing">
+                        你好！很高兴认识你！我们学生会正在筹备一个户外活动，需要一些便携式储能设备，想了解一下你们的产品和市场情况。
+                        <div class="message-time">09:33</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 接收的消息 -->
+            <div class="flex mb-4">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                    <div class="message message-incoming">
+                        当然没问题！我们有几款适合户外活动的储能产品，容量从10000mAh到50000mAh不等，支持太阳能充电，防水防尘，很适合校园户外活动使用。我可以发些产品资料给你参考。
+                        <div class="message-time">09:35</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 接收的消息 -->
+            <div class="flex mb-4">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                    <div class="message message-incoming">
+                        <div class="bg-blue-50 p-2 rounded">
+                            <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                            <span>户外储能产品介绍.pdf</span>
+                        </div>
+                        <div class="message-time">09:36</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 发送的消息 -->
+            <div class="flex justify-end mb-4">
+                <div>
+                    <div class="message message-outgoing">
+                        太感谢了！这些资料很有用。我们的活动大概需要15台左右的设备，主要是给参与者的手机和相机充电，有没有比较经济实惠的型号推荐？
+                        <div class="message-time">09:38</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 接收的消息 -->
+            <div class="flex mb-4">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                    <div class="message message-incoming">
+                        针对学生活动，我建议选择EP-20000型号，20000mAh容量，支持两台设备同时充电，价格也比较合适。如果是学校团购，我们还可以提供优惠价格和定制校徽印刷服务。
+                        <div class="message-time">09:40</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 发送的消息 -->
+            <div class="flex justify-end mb-4">
+                <div>
+                    <div class="message message-outgoing">
+                        定制校徽听起来不错！价格大概是多少？我们下周一要向学校申请预算，需要准确的报价单。
+                        <div class="message-time">09:42</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 正在输入提示 -->
+            <div class="flex mb-4">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                <div class="bg-gray-200 px-4 py-2 rounded-full">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 聊天输入区域 -->
+        <div class="chat-input-container">
+            <button class="mr-2 text-gray-500">
+                <i class="fas fa-plus"></i>
+            </button>
+            <input type="text" class="chat-input" placeholder="输入消息...">
+            <button class="chat-send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 发送消息功能
+            const chatInput = document.querySelector('.chat-input');
+            const sendButton = document.querySelector('.chat-send-btn');
+            const chatMessages = document.querySelector('.chat-messages');
+            
+            // 发送消息函数
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // 创建新消息元素
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const timeString = `${hours}:${minutes}`;
+                    
+                    const messageHTML = `
+                        <div class="flex justify-end mb-4">
+                            <div>
+                                <div class="message message-outgoing">
+                                    ${message}
+                                    <div class="message-time">${timeString}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // 添加消息到聊天区域
+                    chatMessages.insertAdjacentHTML('beforeend', messageHTML);
+                    
+                    // 清空输入框
+                    chatInput.value = '';
+                    
+                    // 滚动到最下方
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    
+                    // 模拟自动回复
+                    setTimeout(() => {
+                        // 显示正在输入
+                        const typingHTML = `
+                            <div class="flex mb-4" id="typing-indicator">
+                                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                                <div class="bg-gray-200 px-4 py-2 rounded-full">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        chatMessages.insertAdjacentHTML('beforeend', typingHTML);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                        
+                        // 3秒后发送回复
+                        setTimeout(() => {
+                            // 移除正在输入提示
+                            document.getElementById('typing-indicator').remove();
+                            
+                            // 添加回复消息
+                            const replyHTML = `
+                                <div class="flex mb-4">
+                                    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Vincent" class="w-8 h-8 rounded-full mr-2">
+                                    <div>
+                                        <div class="message message-incoming">
+                                            好的，我会尽快准备详细的报价单发给你，包含团购优惠和校徽定制的费用。预计今天下午就能发给你，方便你们下周申请预算。
+                                            <div class="message-time">${timeString}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            chatMessages.insertAdjacentHTML('beforeend', replyHTML);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }, 3000);
+                    }, 1000);
+                }
+            }
+            
+            // 点击发送按钮发送消息
+            sendButton.addEventListener('click', sendMessage);
+            
+            // 按回车键发送消息
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // 确保聊天记录滚动到底部
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+    </script>
+</body>
+</html> 

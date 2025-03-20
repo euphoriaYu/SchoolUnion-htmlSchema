@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>资源整合</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div class="status-bar-time">9:41</div>
+        <div class="status-bar-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-title">聚力校元</div>
+    </div>
+
+    <!-- 顶部导航栏 -->
+    <div class="top-tab-nav">
+        <div class="top-tab-nav-item active" data-tab="discover">发现</div>
+        <div class="top-tab-nav-item" data-tab="connections">链接</div>
+        <div class="top-tab-nav-item" data-tab="cardcase">名片夹</div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content pb-20">
+        <!-- 发现功能区 -->
+        <div class="main-tab-content active" id="discover-content">
+            <!-- 标签导航 -->
+            <div class="tab-nav">
+                <div class="tab-nav-item active">附近</div>
+                <div class="tab-nav-item">全部</div>
+            </div>
+
+            <!-- 搜索栏 -->
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="搜索用户">
+            </div>
+
+            <!-- 帖子列表 -->
+            <div class="post">
+                <div class="post-header">
+                    <a href="card-detail.html" class="block">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="用户头像" class="post-avatar">
+                    </a>
+                    <div class="post-user-info">
+                        <a href="card-detail.html" class="block">
+                            <div class="post-user-name">子沟 <span class="text-xs text-pink-500">♀</span> <span class="text-xs bg-yellow-100 text-yellow-800 px-1 rounded">金融投资VC</span></div>
+                        </a>
+                        <div class="post-meta">
+                            <span class="post-location">广州</span>
+                            <span class="post-time">· 5 分钟前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    关注出海、银发经济、体育、新消费赛道，打钱贼快，来聊聊吧
+                </div>
+                <div class="post-meta mb-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>10.01 15:00-17:00</span>
+                    <i class="fas fa-map-marker-alt ml-2"></i>
+                    <span>深圳·南山区</span>
+                    <i class="fas fa-coffee ml-2"></i>
+                    <span>喝杯咖啡</span>
+                </div>
+                <div class="post-actions">
+                    <button class="btn btn-outline text-sm">
+                        一起去 👋 0/1
+                    </button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <a href="card-detail.html" class="block">
+                        <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="用户头像" class="post-avatar">
+                    </a>
+                    <div class="post-user-info">
+                        <a href="card-detail.html" class="block">
+                            <div class="post-user-name">小径分岔的花园 <span class="text-xs text-pink-500">♀</span> <span class="text-xs bg-gray-800 text-white px-1 rounded">直播电商</span></div>
+                        </a>
+                        <div class="post-meta">
+                            <span class="post-location">广州</span>
+                            <span class="post-time">· 50 分钟前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    电商公司，目前专注美妆护肤赛道，抖音单月GMV800万，计划今年布局小红书电商板块，有没有懂小红书电商运营/营销的大佬来聊聊合作？
+                </div>
+                <div class="post-meta mb-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>7.24 15:00-17:00</span>
+                    <i class="fas fa-map-marker-alt ml-2"></i>
+                    <span>深圳·南山区</span>
+                    <i class="fas fa-coffee ml-2"></i>
+                    <span>喝杯咖啡</span>
+                </div>
+                <div class="post-actions">
+                    <button class="btn btn-outline text-sm">
+                        一起去 👋 0/1
+                    </button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <a href="card-detail.html" class="block">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="用户头像" class="post-avatar">
+                    </a>
+                    <div class="post-user-info">
+                        <a href="card-detail.html" class="block">
+                            <div class="post-user-name">Vincent <span class="text-xs text-blue-500">♂</span> <span class="text-xs bg-blue-100 text-blue-800 px-1 rounded">海外渠道</span></div>
+                        </a>
+                        <div class="post-meta">
+                            <span class="post-location">广州</span>
+                            <span class="post-time">· 30 分钟前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    户外储能电源公司营销负责人～目前有出口欧美地区，市场占有率10%，现在计划开发俄罗斯市场，有相关渠道的可交流交流☕
+                </div>
+                <div class="post-meta mb-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>7.24 15:00-17:00</span>
+                    <i class="fas fa-map-marker-alt ml-2"></i>
+                    <span>广州·海珠区</span>
+                    <i class="fas fa-coffee ml-2"></i>
+                    <span>喝杯咖啡</span>
+                </div>
+                <div class="post-actions">
+                    <button class="btn btn-outline text-sm" data-modal="connectionModal">
+                        一起去 👋 0/1
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 浮动发布按钮 -->
+            <a href="post-create.html" class="float-btn">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+
+        <!-- 链接功能区 -->
+        <div class="main-tab-content" id="connections-content">
+            <!-- 链接状态导航 -->
+            <div class="tab-nav">
+                <div class="tab-nav-item active" data-connection-tab="linking">链接中</div>
+                <div class="tab-nav-item" data-connection-tab="linked">已链接</div>
+            </div>
+
+            <!-- 链接中内容 -->
+            <div class="connection-tab-content active" id="linking-content">
+                <!-- 我发起的/我响应的导航 -->
+                <div class="sub-tab-nav">
+                    <div class="sub-tab-nav-item active" data-linking-tab="i-sent">我发起的</div>
+                    <div class="sub-tab-nav-item" data-linking-tab="i-received">我响应的</div>
+                </div>
+
+                <!-- 我发起的链接内容 -->
+                <div class="linking-tab-content active" id="i-sent-content">
+                    <!-- 等待对方确认的链接 -->
+                    <div class="connection-card">
+                        <a href="card-detail.html" class="block">
+                            <div class="card-brief bg-white rounded-lg shadow-sm p-3 mb-1">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <div class="flex items-center">
+                                                    <h3 class="font-medium">张学友</h3>
+                                                    <span class="text-xs text-blue-500 ml-1">♂</span>
+                                                    <span class="text-xs bg-blue-100 text-blue-800 px-1 rounded ml-1">校园媒体</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500">广州·大学城</p>
+                                                <p class="text-xs text-gray-500 mt-1">校媒主编</p>
+                                                <div class="flex items-center mt-1">
+                                                    <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                                    <p class="text-xs text-gray-500 truncate">editor@campus.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="connection-info">
+                            <div class="connection-meta">
+                                <span class="connection-time">今天 09:30</span>
+                                <span class="connection-status new">新申请</span>
+                            </div>
+                            <div class="connection-topic">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>希望就学生会活动进行专访报道</span>
+                            </div>
+                            <div class="connection-request-reason mt-2 text-sm text-gray-600">
+                                <p>看到您组织的校园文化活动很有特色，希望能做一期专题报道，可以为您提供更多曝光机会。</p>
+                            </div>
+                            <div class="connection-actions mt-2">
+                                <button class="btn btn-outline mr-2">
+                                    <i class="fas fa-times mr-1"></i> 婉拒
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-check mr-1"></i> 接受
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 我响应的链接内容 -->
+                <div class="linking-tab-content" id="i-received-content">
+                    <!-- 收到的链接申请 -->
+                    <div class="connection-card">
+                        <a href="card-detail.html" class="block">
+                            <div class="card-brief bg-white rounded-lg shadow-sm p-3 mb-1">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <div class="flex items-center">
+                                                    <h3 class="font-medium">子沟</h3>
+                                                    <span class="text-xs text-pink-500 ml-1">♀</span>
+                                                    <span class="text-xs bg-yellow-100 text-yellow-800 px-1 rounded ml-1">金融投资VC</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500">广州·天河区</p>
+                                                <p class="text-xs text-gray-500 mt-1">投资总监</p>
+                                                <div class="flex items-center mt-1">
+                                                    <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                                    <p class="text-xs text-gray-500 truncate">investor@vc.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="connection-info">
+                            <div class="connection-meta">
+                                <span class="connection-time">昨天发起</span>
+                                <span class="connection-status waiting">等待确认</span>
+                            </div>
+                            <div class="connection-topic">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>关于校园创业项目的投资咨询</span>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="connection-action-btn cancel-btn">
+                                    <i class="fas fa-times"></i>
+                                    <span>撤回申请</span>
+                                </button>
+                                <button class="connection-action-btn more-btn">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 已链接内容 -->
+            <div class="connection-tab-content" id="linked-content">
+                <!-- 我发起的/我响应的导航 -->
+                <div class="sub-tab-nav">
+                    <div class="sub-tab-nav-item active" data-linked-tab="i-sent">我发起的</div>
+                    <div class="sub-tab-nav-item" data-linked-tab="i-received">我响应的</div>
+                </div>
+
+                <!-- 我发起的已链接内容 -->
+                <div class="linked-tab-content active" id="i-sent-linked-content">
+                    <!-- 已链接的连接 -->
+                    <div class="connection-card">
+                        <a href="card-detail.html" class="block">
+                            <div class="card-brief bg-white rounded-lg shadow-sm p-3 mb-1">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <div class="flex items-center">
+                                                    <h3 class="font-medium">Vincent</h3>
+                                                    <span class="text-xs text-blue-500 ml-1">♂</span>
+                                                    <span class="text-xs bg-blue-100 text-blue-800 px-1 rounded ml-1">海外贸易</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500">广州·海珠区</p>
+                                                <p class="text-xs text-gray-500 mt-1">营销负责人</p>
+                                                <div class="flex items-center mt-1">
+                                                    <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                                    <p class="text-xs text-gray-500 truncate">vincent@example.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="connection-info">
+                            <div class="connection-meta">
+                                <span class="connection-time">2小时前开始聊天</span>
+                                <span class="connection-status success">已链接</span>
+                            </div>
+                            <div class="connection-topic">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>关于户外储能电源项目拓展俄罗斯市场的渠道合作</span>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="connection-action-btn chat-btn" data-href="chat.html">
+                                    <i class="fas fa-comment"></i>
+                                    <span>聊天</span>
+                                </button>
+                                <button class="connection-action-btn more-btn">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 我响应的已链接内容 -->
+                <div class="linked-tab-content" id="i-received-linked-content">
+                    <div class="connection-card">
+                        <a href="card-detail.html" class="block">
+                            <div class="card-brief bg-white rounded-lg shadow-sm p-3 mb-1">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <div class="flex items-center">
+                                                    <h3 class="font-medium">小径分岔的花园</h3>
+                                                    <span class="text-xs text-pink-500 ml-1">♀</span>
+                                                    <span class="text-xs bg-gray-800 text-white px-1 rounded ml-1">直播电商</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500">广州·天河区</p>
+                                                <p class="text-xs text-gray-500 mt-1">运营总监</p>
+                                                <div class="flex items-center mt-1">
+                                                    <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                                    <p class="text-xs text-gray-500 truncate">garden@example.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="connection-info">
+                            <div class="connection-meta">
+                                <span class="connection-time">昨天开始聊天</span>
+                                <span class="connection-status success">已链接</span>
+                            </div>
+                            <div class="connection-topic">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>关于小红书电商板块运营与营销合作的讨论</span>
+                            </div>
+                            <div class="connection-actions">
+                                <button class="connection-action-btn chat-btn" data-href="chat.html">
+                                    <i class="fas fa-comment"></i>
+                                    <span>聊天</span>
+                                </button>
+                                <button class="connection-action-btn more-btn">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 名片夹功能区 -->
+        <div class="main-tab-content" id="cardcase-content">
+            <!-- 搜索栏 -->
+            <div class="search-bar mb-4">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="搜索名片">
+            </div>
+
+            <!-- 名片分类导航 -->
+            <div class="card-category-nav mb-4">
+                <div class="card-category active">全部</div>
+                <div class="card-category">校友</div>
+                <div class="card-category">同行</div>
+                <div class="card-category">投资人</div>
+                <div class="card-category">创业者</div>
+            </div>
+
+            <!-- 名片列表 -->
+            <div class="card-list">
+                <a href="card-detail.html" class="block mb-3">
+                    <div class="card-brief bg-white rounded-lg shadow-sm p-3">
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="flex items-center">
+                                            <h3 class="font-medium">Vincent</h3>
+                                            <span class="text-xs text-blue-500 ml-1">♂</span>
+                                            <span class="text-xs bg-blue-100 text-blue-800 px-1 rounded ml-1">海外贸易</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500">广州·海珠区</p>
+                                        <p class="text-xs text-gray-500 mt-1">营销负责人</p>
+                                        <div class="flex items-center mt-1">
+                                            <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                            <p class="text-xs text-gray-500 truncate">vincent@example.com</p>
+                                        </div>
+                                    </div>
+                                    <button class="share-btn">
+                                        <i class="fas fa-share-alt text-gray-400"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="card-detail.html" class="block mb-3">
+                    <div class="card-brief bg-white rounded-lg shadow-sm p-3">
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="flex items-center">
+                                            <h3 class="font-medium">小径分岔的花园</h3>
+                                            <span class="text-xs text-pink-500 ml-1">♀</span>
+                                            <span class="text-xs bg-gray-800 text-white px-1 rounded ml-1">直播电商</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500">广州·天河区</p>
+                                        <p class="text-xs text-gray-500 mt-1">运营总监</p>
+                                        <div class="flex items-center mt-1">
+                                            <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                            <p class="text-xs text-gray-500 truncate">garden@example.com</p>
+                                        </div>
+                                    </div>
+                                    <button class="share-btn">
+                                        <i class="fas fa-share-alt text-gray-400"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="card-detail.html" class="block mb-3">
+                    <div class="card-brief bg-white rounded-lg shadow-sm p-3">
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="flex items-center">
+                                            <h3 class="font-medium">Alex</h3>
+                                            <span class="text-xs text-blue-500 ml-1">♂</span>
+                                            <span class="text-xs bg-green-100 text-green-800 px-1 rounded ml-1">投资人</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500">深圳·南山区</p>
+                                        <p class="text-xs text-gray-500 mt-1">风投合伙人</p>
+                                        <div class="flex items-center mt-1">
+                                            <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                            <p class="text-xs text-gray-500 truncate">alex@venture.com</p>
+                                        </div>
+                                    </div>
+                                    <button class="share-btn">
+                                        <i class="fas fa-share-alt text-gray-400"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 链接申请模态框 -->
+    <div id="connectionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">响应聚力</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <div class="card-brief bg-white rounded-lg shadow-sm p-3">
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="用户头像" class="w-12 h-12 rounded-full mr-3">
+                            <div class="w-full">
+                                <div class="flex items-center">
+                                    <h3 class="font-medium">Vincent</h3>
+                                    <span class="text-xs text-blue-500 ml-1">♂</span>
+                                </div>
+                                <p class="text-xs text-gray-500">广州·海外贸易</p>
+                                <p class="text-xs text-gray-500 mt-1">营销负责人</p>
+                                <div class="flex items-center mt-1">
+                                    <i class="fas fa-envelope text-gray-400 text-xs mr-1"></i>
+                                    <p class="text-xs text-gray-500 truncate">vincent@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">聚力理由</label>
+                    <textarea class="form-control" placeholder="在负责户外储能电源公司营销，目前有出口欧美地区，市场占有率10%，现在计划开发俄罗斯市场，有融资需求，一起聊聊？"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-cancel">取消</button>
+                <button class="btn btn-primary">发送</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享模态框 -->
+    <div id="shareModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">分享名片</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="grid grid-cols-4 gap-4 mb-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-1">
+                            <i class="fab fa-weixin text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">微信好友</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">朋友圈</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-qrcode text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">二维码</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-500 flex items-center justify-center mb-1">
+                            <i class="fas fa-copy text-white text-xl"></i>
+                        </div>
+                        <span class="text-xs">复制链接</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部标签栏 -->
+    <div class="tab-bar">
+        <a href="home.html" class="tab-item" data-page="home">
+            <i class="tab-icon fas fa-home"></i>
+            <span>主页</span>
+        </a>
+        <a href="integration.html" class="tab-item active" data-page="integration">
+            <i class="tab-icon fas fa-project-diagram"></i>
+            <span>资源整合</span>
+        </a>
+        <a href="shop.html" class="tab-item" data-page="shop">
+            <i class="tab-icon fas fa-shopping-bag"></i>
+            <span>商城</span>
+        </a>
+        <a href="profile.html" class="tab-item" data-page="profile">
+            <i class="tab-icon fas fa-user"></i>
+            <span>个人</span>
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 顶部导航栏切换
+            const topTabNavItems = document.querySelectorAll('.top-tab-nav-item');
+            const mainTabContents = document.querySelectorAll('.main-tab-content');
+            
+            topTabNavItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有active类
+                    topTabNavItems.forEach(i => i.classList.remove('active'));
+                    mainTabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前点击项active类
+                    this.classList.add('active');
+                    
+                    // 显示对应内容
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+            
+            // 链接状态导航切换
+            const connectionTabItems = document.querySelectorAll('[data-connection-tab]');
+            const connectionTabContents = document.querySelectorAll('.connection-tab-content');
+            
+            connectionTabItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有active类
+                    connectionTabItems.forEach(i => i.classList.remove('active'));
+                    connectionTabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前点击项active类
+                    this.classList.add('active');
+                    
+                    // 显示对应内容
+                    const tabId = this.getAttribute('data-connection-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+            
+            // 我发起的/我响应的导航切换（链接中）
+            const linkingTabItems = document.querySelectorAll('[data-linking-tab]');
+            const linkingTabContents = document.querySelectorAll('.linking-tab-content');
+            
+            linkingTabItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有active类
+                    linkingTabItems.forEach(i => i.classList.remove('active'));
+                    linkingTabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前点击项active类
+                    this.classList.add('active');
+                    
+                    // 显示对应内容
+                    const tabId = this.getAttribute('data-linking-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+            
+            // 我发起的/我响应的导航切换（已链接）
+            const linkedTabItems = document.querySelectorAll('[data-linked-tab]');
+            const linkedTabContents = document.querySelectorAll('.linked-tab-content');
+            
+            linkedTabItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有active类
+                    linkedTabItems.forEach(i => i.classList.remove('active'));
+                    linkedTabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加当前点击项active类
+                    this.classList.add('active');
+                    
+                    // 显示对应内容
+                    const tabId = this.getAttribute('data-linked-tab');
+                    document.getElementById(`${tabId}-linked-content`).classList.add('active');
+                });
+            });
+            
+            // 聊天按钮点击事件
+            const chatButtons = document.querySelectorAll('.chat-btn');
+            chatButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const href = this.getAttribute('data-href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
